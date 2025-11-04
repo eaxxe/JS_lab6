@@ -36,6 +36,7 @@ export default async function CommentsView({ parts }) {
 
 	let t;
 	search.addEventListener('input', () => { clearTimeout(t); t = setTimeout(refresh, 300); });
+	container.append(el('div', { cls: 'page-end' }));
 
 	await refresh();
 	return container;

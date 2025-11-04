@@ -99,6 +99,7 @@ export default async function UsersView({ parts, router }) {
 
 	let t;
 	input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(refresh, 300); });
+	container.append(el('div', { cls: 'page-end' }));
 
 	await refresh();
 	return container;

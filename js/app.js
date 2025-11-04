@@ -7,12 +7,10 @@ import { Router } from './router.js';
 const root = document.getElementById('app');
 
 const routes = {
-  'users': UsersView,
-  'users#todos': TodosView,
-  'users#posts': PostsView,
-  'users#posts#comments': CommentsView
+	'users': UsersView,
+	'users#todos': TodosView,
+	'users#posts': PostsView,
+	'users#posts#comments': CommentsView
 };
 
 const router = new Router(root, routes);
-
-if (!location.hash) location.hash = '#users';
